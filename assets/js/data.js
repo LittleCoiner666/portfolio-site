@@ -90,7 +90,7 @@ const TUTORIALS = [
     role: "系列课",
     desc: "从建模到动画上身的完整工作流教学。",
     stats: "<b>16</b> 课时 · <b>1.5 万</b>播放",
-    url: "https://space.bilibili.com/473519717",
+    url: "https://www.bilibili.com/cheese/play/ss30595",
     cta: "去个人号看 ↗",
   },
 ];
