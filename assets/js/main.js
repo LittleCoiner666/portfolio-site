@@ -6,6 +6,49 @@
   const $ = (sel) => document.querySelector(sel);
 
   /* ── 站点信息 ── */
+  async function copyText(text) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch (e) {
+      /* 旧浏览器/非安全上下文兜底 */
+      try {
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        const ok = document.execCommand("copy");
+        ta.remove();
+        return ok;
+      } catch (e2) {
+        return false;
+      }
+    }
+  }
+
+  function makeCopyCard(k, value) {
+    const el = document.createElement("button");
+    el.type = "button";
+    el.className = "contact-item";
+    el.title = "点击复制";
+    el.innerHTML =
+      '<span class="k">' + k + '</span><span class="v">' + value +
+      '</span><span class="copy-hint mono">复制</span>';
+    el.addEventListener("click", async () => {
+      const hint = el.querySelector(".copy-hint");
+      const ok = await copyText(value);
+      el.classList.add("copied");
+      hint.textContent = ok ? "已复制 ✓" : "复制失败";
+      setTimeout(() => {
+        el.classList.remove("copied");
+        hint.textContent = "复制";
+      }, 1600);
+    });
+    return el;
+  }
+
   function renderSite() {
     document.title = SITE.name + " · 3D美术作品集";
     $(".brand").firstChild.textContent = SITE.name;
@@ -14,16 +57,8 @@
 
     const row = $("#contact-row");
     row.innerHTML = "";
-    const email = document.createElement("a");
-    email.className = "contact-item";
-    email.href = "mailto:" + SITE.email;
-    email.innerHTML = '<span class="k">邮箱</span>' + SITE.email;
-    row.appendChild(email);
-
-    const wx = document.createElement("span");
-    wx.className = "contact-item";
-    wx.innerHTML = '<span class="k">微信</span>' + SITE.wechat;
-    row.appendChild(wx);
+    row.appendChild(makeCopyCard("邮箱", SITE.email));
+    row.appendChild(makeCopyCard("微信", SITE.wechat));
   }
 
   /* ── 接单种类 ── */

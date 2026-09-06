@@ -377,10 +377,20 @@ a { color: inherit; text-decoration: none; }
   display: inline-flex; align-items: center; gap: 10px;
   border: 1px solid var(--edge); border-radius: 8px;
   padding: 12px 20px; font-size: 15px;
+  background: transparent; color: var(--ink);
+  font-family: var(--font-cn); cursor: pointer;
   transition: border-color 0.25s;
 }
 .contact-item:hover { border-color: var(--sel); }
 .contact-item .k { font-family: var(--font-mono); font-size: 12px; color: var(--ink-dim); }
+.contact-item .copy-hint {
+  font-size: 11.5px; color: var(--ink-dim); opacity: 0.55;
+  border-left: 1px solid var(--edge); padding-left: 10px;
+  transition: color 0.2s, opacity 0.2s;
+}
+.contact-item:hover .copy-hint { opacity: 1; }
+.contact-item.copied { border-color: var(--sel); }
+.contact-item.copied .copy-hint { color: var(--sel); opacity: 1; }
 .footer-fine { font-size: 12.5px; color: var(--ink-dim); opacity: 0.6; }
 .footer-fine span { margin-left: 14px; }
 
