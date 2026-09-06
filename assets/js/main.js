@@ -99,6 +99,7 @@
         '<span class="handle h-bl"></span><span class="handle h-br"></span>' +
         '<model-viewer src="' + m.file + '" alt="' + m.title + '" ' +
           'camera-controls auto-rotate rotation-per-second="28deg" ' +
+          (m.autoplay ? "autoplay " : "") +
           'camera-orbit="' + (m.orbit || "-30deg 75deg auto") + '" ' +
           'shadow-intensity="1" exposure="1.05"></model-viewer>' +
         '<div class="model-info"><h3>' + m.title +

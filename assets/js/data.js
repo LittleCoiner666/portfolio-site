@@ -33,8 +33,17 @@ const SERVICES = [
   },
 ];
 
-/* 3D 作品 —— 现在放的是两个演示占位，换成你的精选代表作 */
+/* 3D 作品 —— autoplay: true 的模型会自动播放 GLB 内嵌动画 */
 const MODELS = [
+  {
+    title: "无人机",
+    en: "Drone",
+    desc: "机械类资产，内嵌骨骼动画，页面里自动循环播放。",
+    file: "assets/models/Drone.glb",
+    meta: "GLB · 3.3 MB · <b>内嵌动画</b>",
+    orbit: "-30deg 72deg auto",
+    autoplay: true,
+  },
   {
     title: "中式布老虎",
     en: "Fabric Tiger",
