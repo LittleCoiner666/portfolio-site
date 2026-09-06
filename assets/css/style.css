@@ -364,7 +364,7 @@ a { color: inherit; text-decoration: none; }
   gap: 24px 48px; margin-bottom: 40px;
 }
 .contact-cards { display: flex; flex-direction: column; gap: 12px; }
-.qr-row { display: flex; gap: 22px; }
+.qr-row { display: flex; gap: 72px; }
 .qr-card { margin: 0; text-align: center; }
 .qr-card img {
   display: block; width: 150px; height: 150px;
