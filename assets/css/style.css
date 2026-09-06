@@ -101,13 +101,6 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--font-disp); font-weight: 700; font-size: 17px;
   letter-spacing: 0.02em;
 }
-.brand-cursor {
-  display: inline-block; width: 9px; height: 16px;
-  margin-left: 5px; vertical-align: -2px;
-  background: var(--sel);
-  animation: blink 1.2s steps(1) infinite;
-}
-@keyframes blink { 50% { opacity: 0; } }
 
 .topnav { display: flex; gap: clamp(14px, 3vw, 30px); font-size: 14px; }
 .topnav a { color: var(--ink-dim); transition: color 0.2s; }

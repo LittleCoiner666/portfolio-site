@@ -4,7 +4,7 @@
    ═══════════════════════════════════════════ */
 
 const SITE = {
-  name: "Z坐标",                  // ← 站名/你的称呼
+  name: "多维坐标美术工作室",
   email: "2311387412@qq.com",
   wechat: "LittleCoiner",
   icp: "",                       // ← 备案下来后填："京ICP备xxxx号"
