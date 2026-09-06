@@ -81,6 +81,17 @@
     ).join("");
   }
 
+  /* ── 教程与课程 ── */
+  function renderTutorials() {
+    $("#tutorials-grid").innerHTML = TUTORIALS.map(
+      (t) =>
+        '<article class="tut-card reveal"><h3>' + t.title +
+        (t.role ? '<span class="role">' + t.role + "</span>" : "") +
+        "</h3><p>" + t.desc + '</p><p class="tut-stats mono">' + t.stats + "</p>" +
+        '<a class="btn btn-ghost" href="' + t.url + '" target="_blank" rel="noopener">' + t.cta + "</a></article>"
+    ).join("");
+  }
+
   /* ── 外链 ── */
   const ICONS = {
     sketchfab:
@@ -128,6 +139,7 @@
   renderServices();
   renderModels();
   renderGames();
+  renderTutorials();
   renderLinks();
   initReveal();
   initTopbar();

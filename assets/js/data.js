@@ -50,42 +50,69 @@ const MODELS = [
   },
 ];
 
-/* 参与过的 Roblox 游戏 —— 占位两条，替换成真实游戏 */
+/* 参与过的 Roblox 游戏 */
 const GAMES = [
   {
-    title: "游戏名待填",
-    role: "负责内容待填",
-    desc: "一句话说明你在这个项目里做了什么、规模多大。",
-    url: "https://www.roblox.com/games/0000000000", // ← 换成真实游戏链接
-    cover: "", // ← 有宣传图就填路径，如 assets/images/game1.jpg
+    title: "Duel Warriors",
+    role: "角色装备 · 场景元素",
+    desc: "游戏内绝大部分角色装备由我们团队制作，并负责部分场景元素。",
+    url: "https://www.roblox.com/games/100400297022629/Duel-Warriors",
+    cover: "assets/images/duel-warriors.jpg",
   },
   {
-    title: "游戏名待填",
-    role: "负责内容待填",
-    desc: "一句话说明你在这个项目里做了什么、规模多大。",
-    url: "https://www.roblox.com/games/0000000000",
-    cover: "",
+    title: "Allblox Battles",
+    role: "角色装备",
+    desc: "游戏内大部分角色装备出自我们团队。",
+    url: "https://www.roblox.com/games/17564320769/Allblox-Battles",
+    cover: "assets/images/allblox-battles.jpg",
+  },
+  {
+    title: "Boxing Clicker Simulator",
+    role: "3D 美术",
+    desc: "游戏内绝大部分 3D 美术由我们团队制作。",
+    url: "https://www.roblox.com/games/14361173627/Boxing-Clicker-Simulator",
+    cover: "assets/images/boxing-clicker.jpg",
   },
 ];
 
-/* 各处找我 —— 替换成你的真实主页地址 */
+/* 教程与课程 */
+const TUTORIALS = [
+  {
+    title: "罗布乐思官方美术课",
+    role: "讲师",
+    desc: "以官方讲师身份在 B站「罗布乐思开发者」出品的美术教学系列。",
+    stats: "<b>8</b> 节官方教程 · 最高单集 <b>10.5 万</b>播放 · 官号 <b>9.7 万</b>粉",
+    url: "https://space.bilibili.com/402416759",
+    cta: "去官号看 ↗",
+  },
+  {
+    title: "Blender + Roblox 动画 NPC 全流程",
+    role: "系列课",
+    desc: "从建模到动画上身的完整工作流教学。",
+    stats: "<b>16</b> 课时 · <b>1.5 万</b>播放",
+    url: "https://space.bilibili.com/473519717",
+    cta: "去个人号看 ↗",
+  },
+];
+
+/* 各处找我 */
 const LINKS = [
   {
     name: "Sketchfab",
     desc: "3D 模型主页",
-    url: "https://sketchfab.com/你的用户名", // ← 替换
+    url: "https://sketchfab.com/LittleZCoordinate",
     icon: "sketchfab",
   },
   {
     name: "CG模型网",
     desc: "作品与素材主页",
-    url: "https://www.cgmodel.com/你的主页", // ← 替换
+    url: "https://www.cgmodel.com/designer/1276659.html",
     icon: "cgmodel",
   },
   {
     name: "Bilibili",
     desc: "过程记录与教程视频",
-    url: "https://space.bilibili.com/你的UID", // ← 替换
+    url: "https://space.bilibili.com/473519717",
     icon: "bilibili",
   },
 ];
