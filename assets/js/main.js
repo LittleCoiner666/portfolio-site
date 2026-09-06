@@ -116,6 +116,20 @@
     ).join("");
   }
 
+  /* ── 插件与软件 ── */
+  function renderTools() {
+    $("#tools-grid").innerHTML = TOOLS.map(
+      (t) =>
+        '<article class="tut-card reveal"><h3>' + t.name +
+        '<span class="role">' + t.platform + "</span></h3>" +
+        "<p>" + t.desc + '</p><p class="tut-stats mono">' + t.meta + "</p>" +
+        (t.url
+          ? '<a class="btn btn-ghost" href="' + t.url + '" target="_blank" rel="noopener">' + (t.cta || "了解详情 ↗") + "</a>"
+          : "") +
+        "</article>"
+    ).join("");
+  }
+
   /* ── 教程与课程 ── */
   function renderTutorials() {
     $("#tutorials-grid").innerHTML = TUTORIALS.map(
@@ -174,6 +188,7 @@
   renderServices();
   renderModels();
   renderGames();
+  renderTools();
   renderTutorials();
   renderLinks();
   initReveal();

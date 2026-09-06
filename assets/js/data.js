@@ -75,6 +75,26 @@ const GAMES = [
   },
 ];
 
+/* 插件与软件（自己开发的产品，url 填了才显示按钮） */
+const TOOLS = [
+  {
+    name: "AnimPilot",
+    platform: "Roblox 插件",
+    desc: "在 Roblox Studio 里直接预览和转换动画，免去引擎与建模软件之间的来回折腾。动画师日常主力工具。",
+    meta: "Roblox Studio · <b>B站小店有售</b>",
+    url: "", // ← 有店铺/发布页链接就填
+    cta: "了解详情 ↗",
+  },
+  {
+    name: "MatForge",
+    platform: "Windows 软件",
+    desc: "拖进模型就出图：材质预览、打光、渲染出图一站完成，支持 OBJ / GLB 与 HDR 环境。",
+    meta: "Windows · <b>¥68 / $9.99</b>",
+    url: "",
+    cta: "了解详情 ↗",
+  },
+];
+
 /* 教程与课程 */
 const TUTORIALS = [
   {
