@@ -7,6 +7,9 @@ const SITE = {
   name: "多维坐标美术工作室",
   email: "2311387412@qq.com",
   wechat: "LittleCoiner",
+  qq: "3607565155",
+  wechatQr: "assets/images/wechat-qr.png",  // 二维码图，留空 "" 则不显示
+  qqQr: "assets/images/qq-qr.png",
   icp: "",                       // ← 备案下来后填："京ICP备xxxx号"
 };
 

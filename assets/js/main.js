@@ -49,6 +49,15 @@
     return el;
   }
 
+  function makeQrCard(src, label) {
+    const fig = document.createElement("figure");
+    fig.className = "qr-card";
+    fig.innerHTML =
+      '<img src="' + src + '" alt="' + label + '">' +
+      '<figcaption class="mono">' + label + "</figcaption>";
+    return fig;
+  }
+
   function renderSite() {
     document.title = SITE.name + " · 3D美术作品集";
     $(".brand").firstChild.textContent = SITE.name;
@@ -57,8 +66,19 @@
 
     const row = $("#contact-row");
     row.innerHTML = "";
-    row.appendChild(makeCopyCard("邮箱", SITE.email));
-    row.appendChild(makeCopyCard("微信", SITE.wechat));
+
+    const cards = document.createElement("div");
+    cards.className = "contact-cards";
+    cards.appendChild(makeCopyCard("邮箱", SITE.email));
+    if (SITE.wechat) cards.appendChild(makeCopyCard("微信", SITE.wechat));
+    if (SITE.qq) cards.appendChild(makeCopyCard("QQ", SITE.qq));
+    row.appendChild(cards);
+
+    const qrs = document.createElement("div");
+    qrs.className = "qr-row";
+    if (SITE.wechatQr) qrs.appendChild(makeQrCard(SITE.wechatQr, "微信扫一扫"));
+    if (SITE.qqQr) qrs.appendChild(makeQrCard(SITE.qqQr, "QQ扫一扫"));
+    if (qrs.children.length) row.appendChild(qrs);
   }
 
   /* ── 接单种类 ── */
