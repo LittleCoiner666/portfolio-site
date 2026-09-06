@@ -97,12 +97,10 @@
         '<article class="model-card reveal">' +
         '<span class="handle h-tl"></span><span class="handle h-tr"></span>' +
         '<span class="handle h-bl"></span><span class="handle h-br"></span>' +
-        '<span class="viewer-hint">拖拽旋转 · 滚轮缩放</span>' +
         '<model-viewer src="' + m.file + '" alt="' + m.title + '" ' +
           'camera-controls auto-rotate rotation-per-second="28deg" ' +
           'camera-orbit="' + (m.orbit || "-30deg 75deg auto") + '" ' +
-          'shadow-intensity="1" exposure="1.05" ' +
-          'interaction-prompt="basic"></model-viewer>' +
+          'shadow-intensity="1" exposure="1.05"></model-viewer>' +
         '<div class="model-info"><h3>' + m.title +
         (m.en ? "<em>" + m.en + "</em>" : "") + "</h3>" +
         (m.desc ? "<p>" + m.desc + "</p>" : "") +
@@ -111,6 +109,13 @@
     ).join("");
 
     document.querySelectorAll(".model-card model-viewer").forEach((mv) => {
+      const initOrbit = mv.getAttribute("camera-orbit");
+      mv.addEventListener("dblclick", () => {
+        mv.cameraTarget = "auto";
+        mv.fieldOfView = "auto";
+        if (initOrbit) mv.cameraOrbit = initOrbit;
+        if (mv.resetTurntableRotation) mv.resetTurntableRotation();
+      });
       mv.addEventListener("error", () => {
         const fail = document.createElement("div");
         fail.className = "viewer-fail";

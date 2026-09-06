@@ -279,15 +279,6 @@ a { color: inherit; text-decoration: none; }
 }
 .model-meta b { color: var(--sel); font-weight: 400; }
 
-.viewer-hint {
-  position: absolute; top: 12px; right: 14px; z-index: 2;
-  font-family: var(--font-mono); font-size: 11.5px;
-  color: var(--ink-dim); background: rgba(19,21,25,0.55);
-  border: 1px solid var(--edge); border-radius: 5px;
-  padding: 3px 9px; pointer-events: none;
-  opacity: 0.85;
-}
-
 /* ── 游戏卡 ───────────────────────────── */
 .game-card {
   display: flex; flex-direction: column;
