@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Z坐标 · 3D美术作品集</title> <!-- ← 站名，改这里 -->
+  <meta name="description" content="Z坐标 — Roblox 生态 3D 美术。角色建模、动画装配、场景资产，从 Blender 到上线全程一个人跑通。">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preload" href="assets/fonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="module" src="assets/vendor/model-viewer.min.js"></script>
+</head>
+<body>
+
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#top">Z坐标<i class="brand-cursor" aria-hidden="true"></i></a>
+    <nav class="topnav" aria-label="页面导航">
+      <a href="#services">接单</a>
+      <a href="#models">3D作品</a>
+      <a href="#games">游戏</a>
+      <a href="#links">各处找我</a>
+      <a href="#contact" class="topnav-cta">联系</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero">
+      <div class="grid-floor" aria-hidden="true"><i class="grid-plane"></i></div>
+      <div class="hero-inner">
+        <p class="eyebrow mono reveal">portfolio.blend — 3D 美术 · Roblox 生态</p>
+        <h1 class="hero-title reveal">把模型从 Blender<br>一路带到玩家面前。</h1>
+        <p class="hero-sub reveal">角色、道具、动画与资产整备。外包交付从第一根线到上线打包，不换人。</p>
+        <div class="hero-meta mono reveal">
+          <span class="status"><i class="status-dot" aria-hidden="true"></i>当前可接单</span>
+          <span>Blender</span><span>Roblox Studio</span><span>实时 3D</span>
+        </div>
+        <div class="hero-actions reveal">
+          <a class="btn btn-solid" href="#models">看 3D 作品</a>
+          <a class="btn btn-ghost" href="#contact">聊一聊单子</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 接单种类 ═══════════ -->
+    <section id="services" class="section">
+      <div class="wrap">
+        <p class="eyebrow mono reveal">about.blend</p>
+        <h2 class="section-title reveal">我能接的单子</h2>
+        <div id="services-grid" class="grid grid-4"></div>
+        <p class="about-note reveal">
+          专职 Roblox 生态的 3D 美术，Blender 全流程 —— 建模、重拓扑、烘焙、导出、装配、上线排查都自己跑通。
+          AnimPilot（Roblox 动画工具）和 MatForge（材质预览工具）的作者，工具柜里的问题我自己先踩过。
+        </p> <!-- ← 自我介绍，改成你自己的话 -->
+      </div>
+    </section>
+
+    <!-- ═══════════ 3D 作品 ═══════════ -->
+    <section id="models" class="section section-alt">
+      <div class="wrap">
+        <p class="eyebrow mono reveal">models/</p>
+        <h2 class="section-title reveal">3D 作品</h2>
+        <p class="section-sub reveal">不用装任何软件 —— 在网页里直接拖拽旋转、滚轮缩放。</p>
+        <div id="models-grid" class="grid grid-2"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ Roblox 游戏 ═══════════ -->
+    <section id="games" class="section">
+      <div class="wrap">
+        <p class="eyebrow mono reveal">games/</p>
+        <h2 class="section-title reveal">参与过的 Roblox 游戏</h2>
+        <div id="games-grid" class="grid grid-2"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 外部主页 ═══════════ -->
+    <section id="links" class="section section-alt">
+      <div class="wrap">
+        <p class="eyebrow mono reveal">links.md</p>
+        <h2 class="section-title reveal">各处找我</h2>
+        <div id="links-grid" class="grid grid-3"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════ 联系 ═══════════ -->
+  <footer id="contact" class="footer">
+    <div class="wrap">
+      <p class="eyebrow mono reveal">contact.txt</p>
+      <h2 class="section-title reveal">单子聊这里</h2>
+      <div id="contact-row" class="contact-row reveal"></div>
+      <p class="footer-fine mono">
+        © <span id="year"></span> Z坐标
+        <span id="icp"></span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
