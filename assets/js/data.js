@@ -5,8 +5,8 @@
 
 const SITE = {
   name: "Z坐标",                  // ← 站名/你的称呼
-  email: "you@example.com",      // ← 换成你的联系邮箱
-  wechat: "微信号：加我请备注「单子」", // ← 换成你的微信号，或改成二维码图片路径
+  email: "2311387412@qq.com",
+  wechat: "LittleCoiner",
   icp: "",                       // ← 备案下来后填："京ICP备xxxx号"
 };
 
