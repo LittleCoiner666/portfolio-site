@@ -82,7 +82,7 @@ const TUTORIALS = [
     role: "讲师",
     desc: "以官方讲师身份在 B站「罗布乐思开发者」出品的美术教学系列。",
     stats: "<b>8</b> 节官方教程 · 最高单集 <b>10.5 万</b>播放 · 官号 <b>9.7 万</b>粉",
-    url: "https://space.bilibili.com/402416759",
+    url: "https://space.bilibili.com/402416759/lists/3213147?type=season",
     cta: "去官号看 ↗",
   },
   {
